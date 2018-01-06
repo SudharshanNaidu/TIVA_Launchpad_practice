@@ -1,0 +1,2104 @@
+cscope 15 $HOME/tmc4123/Embedded/Remote_car_project/Documents/Project+Codes               0000014403
+	@GPIO Header File.h
+
+5 
+	#GPIO_PORTC_LOCK_R
+ (*((vﬁ©ûê*)(0x40006000 + 0x520)))
+
+	)
+
+6 
+	#GPIO_PORTC_CR_R
+ (*((vﬁ©ûê*)(0x40006000 + 0x524)))
+
+	)
+
+7 
+	#GPIO_PORTC_AFSEL_R
+ (*((vﬁ©ûê*)(0x40006000 + 0x420)))
+
+	)
+
+8 
+	#GPIO_PORTC_PCTL_R
+ (*((vﬁ©ûê*)(0x40006000 + 0x52C)))
+
+	)
+
+9 
+	#GPIO_PORTC_DEN_R
+ (*((vﬁ©ûê*)(0x40006000 + 0x51C)))
+
+	)
+
+13 
+	#GPIO_PORTA_DATA_R
+ (*(–vﬁ©ûê*Ë0x400073FC ))
+
+	)
+
+14 
+	#GPIO_PORTA_DIR_R
+ (*(–vﬁ©ûê*Ë0x40007400 ))
+
+	)
+
+15 
+	#GPIO_PORTA_DEN_R
+ (*(–vﬁ©ûê*Ë0x4000751C ))
+
+	)
+
+18 
+	#GPIO_PORTF_DATA_R
+ (*(–vﬁ©ûê*Ë0x400253FC ))
+
+	)
+
+19 
+	#GPIO_PORTF_DIR_R
+ (*(–vﬁ©ûê*Ë0x40025400 ))
+
+	)
+
+20 
+	#GPIO_PORTF_DEN_R
+ (*(–vﬁ©ûê*Ë0x4002551C ))
+
+	)
+
+22 
+	#RED
+ 0x02
+
+23 
+
+	)
+
+24 
+	#ECHO1
+ 0x2
+
+25 
+	#TRIGGER1
+ 0x1
+
+26 
+
+	)
+
+35 
+	#dñay_deboun˚
+ 16000
+
+	)
+
+37 
+GPIO_INIT
+();
+
+38 
+dñay
+(
+cou¡î
+);
+
+	@Main.c
+
+1 
+	~"timî.h
+"
+
+2 
+	~"U¨t.h
+"
+
+3 
+	~"GPIO.h
+"
+
+4 
+	~"pwm.h
+"
+
+5 
+	~"pwm1.h
+"
+
+6 
+	~"pwm2.h
+"
+
+7 
+	~"pwm3.h
+"
+
+8 
+	#MAX_TIME
+ 7500
+
+	)
+
+10 
+	#SYSCTL_RCGC_GPIO_R
+ (*((vﬁ©ûê*)0x400FE608))
+
+	)
+
+11 
+	#GPIO_PORTB_DATA_R
+ (*((vﬁ©ûê*)0x400053FC))
+
+	)
+
+12 
+	#GPIO_PORTB_DIR_R
+ (*((vﬁ©ûê*)0x40005400))
+
+	)
+
+14 
+	#GPIO_PORTB_CLK_EN
+ 0x02
+
+	)
+
+15 
+	#GPIO_PORTB_PINS_EN
+ 0xFF
+
+	)
+
+16 
+	#DELAY
+ 200
+
+	)
+
+18 
+	$GPIO_INIT
+()
+
+20 
+SYSCTL_RCGC_GPIO_R
+ |=0x2F;
+
+22 
+GPIO_PORTF_DEN_R
+ |
+RED
+;
+
+23 
+GPIO_PORTF_DIR_R
+ = 
+RED
+;
+
+25 
+GPIO_PORTA_DIR_R
+ = 
+TRIGGER1
+;
+
+26 
+GPIO_PORTA_DEN_R
+ |(
+ECHO1
+)|(
+TRIGGER1
+);
+
+29 
+	}
+}
+
+34 
+	$UART_INIT
+ ()
+
+36 
+SYSCTL_RCGCUART_R
+ |= 0x00000008;
+
+37 
+SYSCTL_RCGC_GPIO_R
+ |= 0x00000004;
+
+38 
+GPIO_PORTC_DEN_R
+ |= 0x000000C0;
+
+39 
+GPIO_PORTC_AFSEL_R
+ |= 0x000000C0;
+
+40 
+GPIO_PORTC_PCTL_R
+ |= (0x01000000|0x10000000);
+
+41 
+UART3_CTL_R
+ &= ~(0x00000001);
+
+42 
+UART3_IBRD_R
+ = 104;
+
+43 
+UART3_FBRD_R
+ = 11 ;
+
+44 
+UART3_LCRH_R
+ = (0x00000060);
+
+45 
+UART3_CC_R
+ = 0x00000000;
+
+46 
+UART3_CTL_R
+ |= 0x00000001;
+
+47 
+UART3_CTL_R
+ |= 0x100;
+
+48 
+UART3_CTL_R
+ |= 0x200;
+
+49 
+UART3_INT_CLEAR_R
+ &= ~(0X0780);
+
+50 
+UART3_INT_MASK_R
+ |= 0X010;
+
+51 
+NVIC_EN1_R
+ = 
+NIVC_EN1_INT33
+;
+
+52 
+	}
+}
+
+58 
+	$UART_Tx
+(
+d©a
+)
+
+60 (
+UART3_FR_R
+ & 
+UART_FR_TXFF
+) != 0) ;
+
+61 
+UART3_DR_R
+ = 
+d©a
+ ;
+
+62 
+	}
+}
+
+65 
+	$UART_Tx_Såög
+ (*
+±
+ )
+
+67 * 
+±
+ )
+
+69 
+	`UART_Tx
+(* 
+±
+ ) ;
+
+70 
+±
+++;
+
+72 
+	}
+}
+
+74 
+	$dñay
+(
+cou¡
+)
+
+76 
+i
+;
+
+77 
+i
+=0;i<
+cou¡
+;i++);
+
+78 
+	}
+}
+
+79 
+	$Timî0A_Inô
+()
+
+83 
+RCGC_GPIO_R0
+ |
+CLOCK_GPIOF0
+;
+
+84 
+RCGC_TIMER_R0
+ |= 0x01;
+
+88 
+GPIO_PORTB_AFSEL_R0
+ |= 0x00000040;
+
+89 
+GPIO_PORTB_PCTL_R0
+ |= 0x07000000;
+
+90 
+GPIO_PORTB_DEN_R0
+ |= 0x00000040;
+
+92 
+GPTM_CONTROL_R0
+ &~(
+TIM_A_ENABLE0
+);
+
+93 
+GPTM_CONFIG_R0
+ |
+TIM_16_BIT_CONFIG0
+;
+
+97 
+GPTM_TA_MODE_R0
+ |
+TIM_PWM_MODE0
+;
+
+98 
+GPTM_TA_MODE_R0
+ &~(
+TIM_CAPTURE_MODE0
+);
+
+99 
+GPTM_TA_IL_R0
+ = 
+TIM_A_INTERVAL0
+;
+
+101 
+GPTM_TA_MATCH_R0
+ = 
+TIM_A_MATCH0
+ ;
+
+103 
+GPTM_CONTROL_R0
+ |
+TIM_A_ENABLE0
+;
+
+105 
+	}
+}
+
+107 
+	$Timî1A_Inô
+()
+
+111 
+RCGC_GPIO_R
+ |
+CLOCK_GPIOB
+;
+
+112 
+RCGC_TIMER_R
+ |= 0x02;
+
+114 
+GPIO_PORTB_AFSEL_R
+ |= 0x00000010;
+
+115 
+GPIO_PORTB_PCTL_R
+ |= 0x00070000;
+
+116 
+GPIO_PORTB_DEN_R
+ |= 0x00000010;
+
+118 
+GPTM_CONTROL_R
+ &~(
+TIM_A_ENABLE
+);
+
+119 
+GPTM_CONFIG_R
+ |
+TIM_16_BIT_CONFIG
+;
+
+123 
+GPTM_TA_MODE_R
+ |
+TIM_PWM_MODE
+;
+
+124 
+GPTM_TA_MODE_R
+ &~(
+TIM_CAPTURE_MODE
+);
+
+125 
+GPTM_TA_IL_R
+ = 
+TIM_A_INTERVAL
+;
+
+127 
+GPTM_TA_MATCH_R
+ = 
+TIM_A_MATCH
+ ;
+
+129 
+GPTM_CONTROL_R
+ |
+TIM_A_ENABLE
+;
+
+131 
+	}
+}
+
+134 
+	$Timî2A_Inô
+()
+
+138 
+RCGC_GPIO_R2
+ |
+CLOCK_GPIOB2
+;
+
+139 
+RCGC_TIMER_R2
+ |= 0x04;
+
+141 
+GPIO_PORTB_AFSEL_R2
+ |= 0x00000001;
+
+142 
+GPIO_PORTB_PCTL_R2
+ |= 0x00000007;
+
+143 
+GPIO_PORTB_DEN_R2
+ |= 0x00000001;
+
+145 
+GPTM_CONTROL_R2
+ &~(
+TIM_A_ENABLE2
+);
+
+146 
+GPTM_CONFIG_R2
+ |
+TIM_16_BIT_CONFIG2
+;
+
+150 
+GPTM_TA_MODE_R2
+ |
+TIM_PWM_MODE2
+;
+
+151 
+GPTM_TA_MODE_R2
+ &~(
+TIM_CAPTURE_MODE2
+);
+
+152 
+GPTM_TA_IL_R2
+ = 
+TIM_A_INTERVAL2
+;
+
+154 
+GPTM_TA_MATCH_R2
+ = 
+TIM_A_MATCH2
+ ;
+
+156 
+GPTM_CONTROL_R2
+ |
+TIM_A_ENABLE2
+;
+
+158 
+	}
+}
+
+161 
+	$Timî3A_Inô
+()
+
+165 
+RCGC_GPIO_R3
+ |
+CLOCK_GPIOB3
+;
+
+166 
+RCGC_TIMER_R3
+ |= 0x08;
+
+170 
+GPIO_PORTB_AFSEL_R3
+ |= 0x00000004;
+
+171 
+GPIO_PORTB_PCTL_R3
+ |= 0x00000700;
+
+172 
+GPIO_PORTB_DEN_R3
+ |= 0x00000004;
+
+174 
+GPTM_CONTROL_R3
+ &~(
+TIM_A_ENABLE3
+);
+
+175 
+GPTM_CONFIG_R3
+ |
+TIM_16_BIT_CONFIG3
+;
+
+176 
+GPTM_TA_MODE_R3
+ |
+TIM_PWM_MODE3
+;
+
+177 
+GPTM_TA_MODE_R3
+ &~(
+TIM_CAPTURE_MODE3
+);
+
+178 
+GPTM_TA_IL_R3
+ = 
+TIM_A_INTERVAL3
+;
+
+180 
+GPTM_TA_MATCH_R3
+ = 
+TIM_A_MATCH3
+ ;
+
+182 
+GPTM_CONTROL_R3
+ |
+TIM_A_ENABLE3
+;
+
+184 
+	}
+}
+
+188 
+	$Backw¨d
+(
+duty
+){
+
+189 
+GPTM_TA_MATCH_R0
+ = 
+duty
+ ;
+
+190 
+GPTM_TA_MATCH_R
+ = 15999 ;
+
+191 
+GPTM_TA_MATCH_R2
+ = 
+duty
+ ;
+
+192 
+GPTM_TA_MATCH_R3
+ = 15999 ;
+
+194 
+	}
+}
+
+196 
+	$F‹w¨d
+(
+duty
+){
+
+197 
+GPTM_TA_MATCH_R0
+ = 15999 ;
+
+198 
+GPTM_TA_MATCH_R
+ = 
+duty
+ ;
+
+199 
+GPTM_TA_MATCH_R2
+ = 15999 ;
+
+200 
+GPTM_TA_MATCH_R3
+ = 
+duty
+ ;
+
+202 
+	}
+}
+
+205 
+	$Le·
+ (
+duty
+){
+
+206 
+GPTM_TA_MATCH_R0
+ = 15999 ;
+
+207 
+GPTM_TA_MATCH_R
+ = 
+duty
+ ;
+
+208 
+GPTM_TA_MATCH_R2
+ = 
+duty
+ ;
+
+209 
+GPTM_TA_MATCH_R3
+ = 15999 ;
+
+211 
+	}
+}
+
+214 
+	$Right
+(
+duty
+){
+
+215 
+GPTM_TA_MATCH_R0
+ = 
+duty
+ ;
+
+216 
+GPTM_TA_MATCH_R
+ = 15999 ;
+
+217 
+GPTM_TA_MATCH_R2
+ = 15999 ;
+
+218 
+GPTM_TA_MATCH_R3
+ = 
+duty
+ ;
+
+220 
+	}
+}
+
+223 
+	$St›
+(){
+
+224 
+GPTM_TA_MATCH_R0
+ = 15999 ;
+
+225 
+GPTM_TA_MATCH_R
+ = 15999 ;
+
+226 
+GPTM_TA_MATCH_R2
+ = 15999 ;
+
+227 
+GPTM_TA_MATCH_R3
+ = 15999 ;
+
+229 
+	}
+}
+
+231 
+	$UART3_H™dÀr
+() {
+
+232 
+u
+=0,
+i
+=0,
+lu
+=0,
+ru
+=0;
+
+233 
+rx_d©a
+;
+
+234 
+c
+;
+
+236 
+UART3_INT_CLEAR_R
+ &= ~(0X010);
+
+237 
+rx_d©a
+ = 
+UART3_DR_R
+;
+
+238 
+c
+=
+rx_d©a
+;
+
+240 if(
+	`Right_Di°™˚
+() < 5.0)
+
+242 
+	`St›
+();
+
+243 
+	`dñay
+(10000);
+
+244 
+	`Backw¨d
+(12000);
+
+245 
+	`dñay
+(10000);
+
+246 
+	`St›
+();
+
+247 
+u
+=1;
+
+248 
+lu
+=0;
+
+249 
+ru
+=0;
+
+252 if(
+c
+ ='f' && 
+u
+==0){
+
+253 
+	`F‹w¨d
+(12000);
+
+254 
+lu
+=0;
+
+255 
+ru
+=0;
+
+258 if(
+c
+ =='b'){
+
+259 
+u
+=0;
+
+260 
+	`Backw¨d
+(12000);
+
+263 if(
+c
+ =='l' && 
+lu
+==0){
+
+264 
+u
+=0;
+
+265 
+ru
+=0;
+
+266 
+lu
+=1;
+
+267 
+	`St›
+();
+
+268 
+	`Le·
+(13000);
+
+269 
+	`dñay
+(4600000);
+
+270 
+	`St›
+();
+
+273 if(
+c
+ =='g' && 
+ru
+==0){
+
+274 
+u
+=0;
+
+275 
+ru
+=1;
+
+276 
+lu
+=0;
+
+277 
+	`Right
+(13000);
+
+278 
+	`dñay
+(4600000);
+
+279 
+	`St›
+();
+
+282 if(
+c
+ =='s'){
+
+283 
+u
+=0;
+
+284 
+lu
+=0;
+
+285 
+ru
+=0;
+
+286 
+	`St›
+();
+
+289 
+	}
+}
+
+290 
+	$ˇr_öô
+(){
+
+292 
+	`Timî0A_Inô
+();
+
+293 
+	`Timî1A_Inô
+();
+
+294 
+	`Timî2A_Inô
+();
+
+295 
+	`Timî3A_Inô
+();
+
+297 
+	}
+}
+
+300 
+	$dñay_mi¸o£c⁄d
+(
+time
+)
+
+302 
+i
+;
+
+303 
+SYSCTL_RCGCTIMER_R
+ |=
+TIM0_CLK_EN
+;
+
+304 
+TIMER0_CFG_R
+ =0x04;
+
+305 
+TIMER0_TAMR_R
+ =0x02;
+
+306 
+TIMER0_TAILR_R
+ =16-1;
+
+307 
+TIMER0_ICR_R
+ =0x1;
+
+308 
+TIMER0_CTL_R
+ |=0x01;
+
+309 
+i
+=0; i<
+time
+; i++)
+
+311 (
+TIMER0_RIS_R
+ &0x1)==0);
+
+312 
+TIMER0_ICR_R
+ =0x01;
+
+315 
+	}
+}
+
+316 
+	$Right_Di°™˚
+()
+
+318 
+cou¡î
+=0;
+
+319 
+di°™˚
+=0;
+
+321 
+GPIO_PORTA_DATA_R
+ &=~
+TRIGGER1
+;
+
+322 
+	`dñay_mi¸o£c⁄d
+(10);
+
+323 
+GPIO_PORTA_DATA_R
+ |=
+TRIGGER1
+;
+
+324 
+	`dñay_mi¸o£c⁄d
+(10);
+
+325 
+GPIO_PORTA_DATA_R
+ &=~
+TRIGGER1
+;
+
+326 
+	`dñay_mi¸o£c⁄d
+(10);
+
+327 
+cou¡î
+=0;
+
+328 (
+GPIO_PORTA_DATA_R
+ & 
+ECHO1
+)==0)
+
+331 ((
+GPIO_PORTA_DATA_R
+ & 
+ECHO1
+Ë!=0Ë& (
+cou¡î
+< 
+MAX_TIME
+))
+
+333 
+cou¡î
+++;
+
+334 
+	`dñay_mi¸o£c⁄d
+(1);
+
+336 
+di°™˚
+ =()(
+cou¡î
+ *() 0.0170000);
+
+337  
+di°™˚
+;
+
+338 
+	}
+}
+
+340 
+	$maö
+()
+
+342 
+	`ˇr_öô
+();
+
+343 
+	`GPIO_INIT
+();
+
+346 
+SYSCTL_RCGC_GPIO_R
+ |
+GPIO_PORTB_CLK_EN
+;
+
+348 
+GPIO_PORTB_DIR_R
+|=
+GPIO_PORTB_PINS_EN
+;
+
+349 
+GPIO_PORTB_DEN_R
+ |
+GPIO_PORTB_PINS_EN
+;
+
+350 
+	`UART_INIT
+();
+
+358 
+	}
+}
+
+	@PWM 1 Header File.h
+
+1 
+	#TM_BASE
+ 0x40031000
+
+	)
+
+3 
+	#RCGC_TIMER_R
+ *(vﬁ©ûê*Ë0x400FE604
+
+	)
+
+4 
+	#RCGC_GPIO_R
+ *(vﬁ©ûê*Ë0x400FE108
+
+	)
+
+5 
+	#CLOCK_GPIOB
+ 0x00000002
+
+6 
+	#SYS_CLOCK_FREQUENCY
+ 16000000
+
+	)
+
+11 
+	#GPTM_CONFIG_R
+ *(vﬁ©ûê*Ë(
+TM_BASE
+ + 0x000)
+
+	)
+
+12 
+	#GPTM_TA_MODE_R
+ *(vﬁ©ûê*Ë(
+TM_BASE
+ + 0x004)
+
+	)
+
+13 
+	#GPTM_CONTROL_R
+ *(vﬁ©ûê*Ë(
+TM_BASE
+ + 0x00C)
+
+	)
+
+14 
+	#GPTM_INT_MASK_R
+ *(vﬁ©ûê*Ë(
+TM_BASE
+ + 0x018)
+
+	)
+
+15 
+	#GPTM_INT_CLEAR_R
+ *(vﬁ©ûê*Ë(
+TM_BASE
+ + 0x024)
+
+	)
+
+16 
+	#GPTM_TA_IL_R
+ *(vﬁ©ûê*Ë(
+TM_BASE
+ + 0x028)
+
+	)
+
+17 
+	#GPTM_TA_MATCH_R
+ *(vﬁ©ûê*Ë(
+TM_BASE
+ + 0x030)
+
+	)
+
+19 
+	#GPIO_PORTB_AFSEL_R
+ *((vﬁ©ûê*Ë0x40005420)
+
+	)
+
+20 
+	#GPIO_PORTB_PCTL_R
+ *((vﬁ©ûê*Ë0x4000552C)
+
+	)
+
+21 
+	#GPIO_PORTB_DEN_R
+ *((vﬁ©ûê*Ë0x4000551C)
+
+	)
+
+23 
+	#TIM_16_BIT_CONFIG
+ 0x00000004
+
+	)
+
+24 
+	#TIM_PERIODIC_MODE
+ 0x00000002
+
+	)
+
+25 
+	#TIM_A_ENABLE
+ 0x00000001
+
+	)
+
+28 
+	#TIM_PWM_MODE
+ 0x0000000A
+
+	)
+
+29 
+	#TIM_CAPTURE_MODE
+ 0x00000004
+
+	)
+
+31 
+	#TIM_A_INTERVAL
+ 16000
+
+	)
+
+32 
+	#TIM_A_MATCH
+ 12000
+
+	)
+
+36 
+Timî1A_Inô
+();
+
+	@PWM 2 Header File.h
+
+1 
+	#TM_BASE2
+ 0x40032000
+
+	)
+
+3 
+	#RCGC_TIMER_R2
+ *(vﬁ©ûê*Ë0x400FE604
+
+	)
+
+4 
+	#RCGC_GPIO_R2
+ *(vﬁ©ûê*Ë0x400FE108
+
+	)
+
+5 
+	#CLOCK_GPIOB2
+ 0x00000002
+
+	)
+
+6 
+	#SYS_CLOCK_FREQUENCY2
+ 16000000
+
+	)
+
+8 
+	#GPTM_TA_PRESCALE_R2
+ *(vﬁ©ûê*Ë(
+TM_BASE2
+ + 0x038)
+
+	)
+
+9 
+	#GPTM_TA_PRESCALE_MATCH_R2
+ *(vﬁ©ûê*Ë(
+TM_BASE2
+ + 0x040)
+
+	)
+
+10 
+	#GPTM_CONFIG_R2
+ *(vﬁ©ûê*Ë(
+TM_BASE2
+ + 0x000)
+
+	)
+
+11 
+	#GPTM_TA_MODE_R2
+ *(vﬁ©ûê*Ë(
+TM_BASE2
+ + 0x004)
+
+	)
+
+12 
+	#GPTM_CONTROL_R2
+ *(vﬁ©ûê*Ë(
+TM_BASE2
+ + 0x00C)
+
+	)
+
+13 
+	#GPTM_INT_MASK_R2
+ *(vﬁ©ûê*Ë(
+TM_BASE2
+ + 0x018)
+
+	)
+
+14 
+	#GPTM_INT_CLEAR_R2
+ *(vﬁ©ûê*Ë(
+TM_BASE2
+ + 0x024)
+
+	)
+
+15 
+	#GPTM_TA_IL_R2
+ *(vﬁ©ûê*Ë(
+TM_BASE2
+ + 0x028)
+
+	)
+
+16 
+	#GPTM_TA_MATCH_R2
+ *(vﬁ©ûê*Ë(
+TM_BASE2
+ + 0x030)
+
+	)
+
+18 
+	#GPIO_PORTB_AFSEL_R2
+ *((vﬁ©ûê*Ë0x40005420)
+
+	)
+
+19 
+	#GPIO_PORTB_PCTL_R2
+ *((vﬁ©ûê*Ë0x4000552C)
+
+	)
+
+20 
+	#GPIO_PORTB_DEN_R2
+ *((vﬁ©ûê*Ë0x4000551C)
+
+	)
+
+22 
+	#TIM_16_BIT_CONFIG2
+ 0x00000004
+
+	)
+
+23 
+	#TIM_PERIODIC_MODE2
+ 0x00000002
+
+	)
+
+24 
+	#TIM_A_ENABLE2
+ 0x00000001
+
+	)
+
+27 
+	#TIM_PWM_MODE2
+ 0x0000000A
+
+	)
+
+28 
+	#TIM_CAPTURE_MODE2
+ 0x00000004
+
+	)
+
+30 
+	#TIM_A_INTERVAL2
+ 16000
+
+	)
+
+31 
+	#TIM_A_MATCH2
+ 12000
+
+	)
+
+35 
+Timî2A_Inô
+();
+
+	@PWM 3 Header File.h
+
+1 
+	#TM_BASE3
+ 0x40033000
+
+	)
+
+3 
+	#RCGC_TIMER_R3
+ *(vﬁ©ûê*Ë0x400FE604
+
+	)
+
+4 
+	#RCGC_GPIO_R3
+ *(vﬁ©ûê*Ë0x400FE108
+
+	)
+
+5 
+	#CLOCK_GPIOB3
+ 0x00000002
+
+	)
+
+8 
+	#GPTM_TA_PRESCALE_R3
+ *(vﬁ©ûê*Ë(
+TM_BASE3
+ + 0x038)
+
+	)
+
+9 
+	#GPTM_TA_PRESCALE_MATCH_R3
+ *(vﬁ©ûê*Ë(
+TM_BASE3
+ + 0x040)
+
+	)
+
+10 
+	#GPTM_CONFIG_R3
+ *(vﬁ©ûê*Ë(
+TM_BASE3
+ + 0x000)
+
+	)
+
+11 
+	#GPTM_TA_MODE_R3
+ *(vﬁ©ûê*Ë(
+TM_BASE3
+ + 0x004)
+
+	)
+
+12 
+	#GPTM_CONTROL_R3
+ *(vﬁ©ûê*Ë(
+TM_BASE3
+ + 0x00C)
+
+	)
+
+13 
+	#GPTM_INT_MASK_R3
+ *(vﬁ©ûê*Ë(
+TM_BASE3
+ + 0x018)
+
+	)
+
+14 
+	#GPTM_INT_CLEAR_R3
+ *(vﬁ©ûê*Ë(
+TM_BASE3
+ + 0x024)
+
+	)
+
+15 
+	#GPTM_TA_IL_R3
+ *(vﬁ©ûê*Ë(
+TM_BASE3
+ + 0x028)
+
+	)
+
+16 
+	#GPTM_TA_MATCH_R3
+ *(vﬁ©ûê*Ë(
+TM_BASE3
+ + 0x030)
+
+	)
+
+18 
+	#GPIO_PORTB_AFSEL_R3
+ *((vﬁ©ûê*Ë0x40005420)
+
+	)
+
+19 
+	#GPIO_PORTB_PCTL_R3
+ *((vﬁ©ûê*Ë0x4000552C)
+
+	)
+
+20 
+	#GPIO_PORTB_DEN_R3
+ *((vﬁ©ûê*Ë0x4000551C)
+
+	)
+
+21 
+	#GPIO_PORTB_LOCK_R3
+ (*((vﬁ©ûê*)0x40025520))
+
+	)
+
+22 
+	#GPIO_PORTB_CR_R3
+ (*((vﬁ©ûê*)0x40025524))
+
+	)
+
+24 
+	#TIM_16_BIT_CONFIG3
+ 0x00000004
+
+	)
+
+25 
+	#TIM_PERIODIC_MODE3
+ 0x00000002
+
+	)
+
+26 
+	#TIM_A_ENABLE3
+ 0x00000001
+
+	)
+
+29 
+	#TIM_PWM_MODE3
+ 0x0000000A
+
+	)
+
+30 
+	#TIM_CAPTURE_MODE3
+ 0x00000004
+
+	)
+
+32 
+	#TIM_A_INTERVAL3
+ 16000
+
+	)
+
+33 
+	#TIM_A_MATCH3
+ 12000
+
+	)
+
+37 
+Timî3A_Inô
+();
+
+	@PWM Header File.h
+
+1 
+	#TM_BASE0
+ 0x40030000
+
+	)
+
+3 
+	#RCGC_TIMER_R0
+ *(vﬁ©ûê*Ë0x400FE604
+
+	)
+
+4 
+	#RCGC_GPIO_R0
+ *(vﬁ©ûê*Ë0x400FE108
+
+	)
+
+5 
+	#CLOCK_GPIOF0
+ 0x00000002
+
+	)
+
+6 
+	#SYS_CLOCK_FREQUENCY0
+ 16000000
+
+	)
+
+9 
+	#GPTM_CONFIG_R0
+ *(vﬁ©ûê*Ë(
+TM_BASE0
+ + 0x000)
+
+	)
+
+10 
+	#GPTM_TA_MODE_R0
+ *(vﬁ©ûê*Ë(
+TM_BASE0
+ + 0x004)
+
+	)
+
+11 
+	#GPTM_CONTROL_R0
+ *(vﬁ©ûê*Ë(
+TM_BASE0
+ + 0x00C)
+
+	)
+
+12 
+	#GPTM_INT_MASK_R0
+ *(vﬁ©ûê*Ë(
+TM_BASE0
+ + 0x018)
+
+	)
+
+13 
+	#GPTM_INT_CLEAR_R0
+ *(vﬁ©ûê*Ë(
+TM_BASE0
+ + 0x024)
+
+	)
+
+14 
+	#GPTM_TA_IL_R0
+ *(vﬁ©ûê*Ë(
+TM_BASE0
+ + 0x028)
+
+	)
+
+15 
+	#GPTM_TA_MATCH_R0
+ *(vﬁ©ûê*Ë(
+TM_BASE0
+ + 0x030)
+
+	)
+
+17 
+	#GPIO_PORTB_AFSEL_R0
+ *((vﬁ©ûê*Ë0x40005420)
+
+	)
+
+18 
+	#GPIO_PORTB_PCTL_R0
+ *((vﬁ©ûê*Ë0x4000552C)
+
+	)
+
+19 
+	#GPIO_PORTB_DEN_R0
+ *((vﬁ©ûê*Ë0x4000551C)
+
+	)
+
+23 
+	#TIM_16_BIT_CONFIG0
+ 0x00000004
+
+	)
+
+24 
+	#TIM_PERIODIC_MODE0
+ 0x00000002
+
+	)
+
+25 
+	#TIM_A_ENABLE0
+ 0x00000001
+
+	)
+
+28 
+	#TIM_PWM_MODE0
+ 0x0000000A
+
+	)
+
+29 
+	#TIM_CAPTURE_MODE0
+ 0x00000004
+
+	)
+
+31 
+	#TIM_A_INTERVAL0
+ 16000
+
+	)
+
+32 
+	#TIM_A_MATCH0
+ 12000
+
+	)
+
+36 
+Timî0A_Inô
+();
+
+	@Timer Header File.h
+
+1 
+	#SYSCTL_RCGCTIMER_R
+ (*(–vﬁ©ûê* ) 0x400FE65C ))
+
+	)
+
+2 
+	#TIMER0_CTL_R
+ (*(–vﬁ©ûê* ) 0x4004C00C ))
+
+	)
+
+3 
+	#TIMER0_CFG_R
+ (*(–vﬁ©ûê* ) 0x4004C000 ))
+
+	)
+
+4 
+	#TIMER0_TAMR_R
+ (*(–vﬁ©ûê* ) 0x4004C004 ))
+
+	)
+
+5 
+	#TIMER0_TAILR_R
+ (*(–vﬁ©ûê* ) 0x4004C028 ))
+
+	)
+
+6 
+	#TIMER0_TAPR_R
+ (*(–vﬁ©ûê* ) 0x4004C038 ))
+
+	)
+
+7 
+	#TIMER0_TBMR_R
+ (*(–vﬁ©ûê* ) 0x4004C008 ))
+
+	)
+
+8 
+	#TIMER0_TBILR_R
+ (*(–vﬁ©ûê* ) 0x4004C02C ))
+
+	)
+
+9 
+	#TIMER0_TBPR_R
+ (*(–vﬁ©ûê* ) 0x4004C03C ))
+
+	)
+
+10 
+	#TIMER0_ICR_R
+ (*(–vﬁ©ûê* ) 0x4004C024 ))
+
+	)
+
+11 
+	#TIMER0_IMR_R
+ (*(–vﬁ©ûê* ) 0x4004C018 ))
+
+	)
+
+12 
+	#TIMER0_RIS_R
+ (*(–vﬁ©ûê* ) 0x4004C01C ))
+
+	)
+
+15 
+	#TIM0_CLK_EN
+ 0x04
+
+16 
+	#TIM0_EN
+ 0x04
+
+17 
+	#TIM_16_BIT_EN
+ 0x4
+
+18 
+	#TIM_TAMR_PERIODIC_EN
+ 0x2
+
+19 
+	#TIM_FREQ_10u£c
+ 0x9F
+
+20 
+	#TIM0A_INT_CLR
+ 0x1
+
+21 
+	#PORTS_CLK_EN
+ 0x21
+
+22 
+	#LED_RED
+ 0x04
+
+23 
+	#TIM0B_INT_CLR
+ 0x0100
+
+24 
+	#EN0_INT20
+ 0x00100000
+
+25 
+	#TOGGLE_PF3
+ 0x08
+
+26 
+	#GREEN_RED
+ 0x08
+
+27 
+
+	)
+
+28 
+GPIO_INIT
+();
+
+30 
+Right_Di°™˚
+();
+
+33 
+dñay
+(
+cou¡
+);
+
+34 
+dñay_mi¸o£c⁄d
+(
+time
+);
+
+	@Uart Header File.h
+
+1 
+	#SYSCTL_RCGCUART_R
+ (*((vﬁ©ûê*Ë0x400FE618 ))
+
+	)
+
+4 
+	#UART3_CTL_R
+ (*((vﬁ©ûê*Ë(0x4000F000 + 0x030)))
+
+	)
+
+5 
+	#UART3_IBRD_R
+ (*((vﬁ©ûê*Ë(0x4000F000 + 0x024)))
+
+	)
+
+6 
+	#UART3_FBRD_R
+ (*((vﬁ©ûê*Ë(0x4000F000 + 0x028)))
+
+	)
+
+7 
+	#UART3_LCRH_R
+ (*((vﬁ©ûê*Ë(0x4000F000 + 0x02C)))
+
+	)
+
+8 
+	#UART3_CC_R
+ (*((vﬁ©ûê*Ë(0x4000F000 + 0xFC8)))
+
+	)
+
+9 
+	#UART3_FR_R
+ (*((vﬁ©ûê*Ë(0x4000F000 + 0x018)))
+
+	)
+
+10 
+	#UART3_DR_R
+ (*((vﬁ©ûê*Ë(0x4000F000 + 0x000)))
+
+	)
+
+12 
+	#UART3_INT_MASK_R
+ (*((vﬁ©ûê*Ë(0x4000F000 + 0x038)))
+
+	)
+
+13 
+	#UART3_RIS_R
+ (*((vﬁ©ûê*Ë(0x4000F000 + 0x03C)))
+
+	)
+
+14 
+	#UART3_MIS_R
+ (*((vﬁ©ûê*Ë(0x4000F000 + 0x040)))
+
+	)
+
+15 
+	#UART3_INT_CLEAR_R
+ (*((vﬁ©ûê*Ë(0x4000F000 + 0x044)))
+
+	)
+
+16 
+	#UART3_FIFO_LS_R
+ (*((vﬁ©ûê*Ë(0x4000F000 + 0x034)))
+
+	)
+
+18 
+	#NVIC_EN1_R
+ (*((vﬁ©ûê*Ë(0XE000E104)))
+
+	)
+
+19 
+	#NIVC_EN1_INT33
+ 0X08000000
+
+	)
+
+21 
+	#UART_FR_RXFE
+ 0x00000010
+
+22 
+	#UART_FR_TXFF
+ 0x00000020
+
+23 
+
+	)
+
+24 
+UART_INIT
+ ();
+
+25 
+UART_Tx
+(
+d©a
+);
+
+26 
+UART_Tx_Såög
+ (*
+±
+ );
+
+	@
+1
+.
+1
+/usr/include
+8
+143
+GPIO Header File.h
+Main.c
+PWM 1 Header File.h
+PWM 2 Header File.h
+PWM 3 Header File.h
+PWM Header File.h
+Timer Header File.h
+Uart Header File.h

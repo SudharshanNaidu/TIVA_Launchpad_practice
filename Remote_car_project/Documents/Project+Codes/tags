@@ -1,0 +1,181 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Backward	Main.c	/^void Backward(int duty){$/;"	f
+CLOCK_GPIOB	PWM 1 Header File.h	5;"	d
+CLOCK_GPIOB2	PWM 2 Header File.h	5;"	d
+CLOCK_GPIOB3	PWM 3 Header File.h	5;"	d
+CLOCK_GPIOF0	PWM Header File.h	5;"	d
+DELAY	Main.c	16;"	d	file:
+ECHO1	GPIO Header File.h	24;"	d
+EN0_INT20	Timer Header File.h	24;"	d
+Forward	Main.c	/^void Forward(int duty){$/;"	f
+GPIO_INIT	Main.c	/^void GPIO_INIT(void)$/;"	f
+GPIO_PORTA_DATA_R	GPIO Header File.h	13;"	d
+GPIO_PORTA_DEN_R	GPIO Header File.h	15;"	d
+GPIO_PORTA_DIR_R	GPIO Header File.h	14;"	d
+GPIO_PORTB_AFSEL_R	PWM 1 Header File.h	19;"	d
+GPIO_PORTB_AFSEL_R0	PWM Header File.h	17;"	d
+GPIO_PORTB_AFSEL_R2	PWM 2 Header File.h	18;"	d
+GPIO_PORTB_AFSEL_R3	PWM 3 Header File.h	18;"	d
+GPIO_PORTB_CLK_EN	Main.c	14;"	d	file:
+GPIO_PORTB_CR_R3	PWM 3 Header File.h	22;"	d
+GPIO_PORTB_DATA_R	Main.c	11;"	d	file:
+GPIO_PORTB_DEN_R	PWM 1 Header File.h	21;"	d
+GPIO_PORTB_DEN_R0	PWM Header File.h	19;"	d
+GPIO_PORTB_DEN_R2	PWM 2 Header File.h	20;"	d
+GPIO_PORTB_DEN_R3	PWM 3 Header File.h	20;"	d
+GPIO_PORTB_DIR_R	Main.c	12;"	d	file:
+GPIO_PORTB_LOCK_R3	PWM 3 Header File.h	21;"	d
+GPIO_PORTB_PCTL_R	PWM 1 Header File.h	20;"	d
+GPIO_PORTB_PCTL_R0	PWM Header File.h	18;"	d
+GPIO_PORTB_PCTL_R2	PWM 2 Header File.h	19;"	d
+GPIO_PORTB_PCTL_R3	PWM 3 Header File.h	19;"	d
+GPIO_PORTB_PINS_EN	Main.c	15;"	d	file:
+GPIO_PORTC_AFSEL_R	GPIO Header File.h	7;"	d
+GPIO_PORTC_CR_R	GPIO Header File.h	6;"	d
+GPIO_PORTC_DEN_R	GPIO Header File.h	9;"	d
+GPIO_PORTC_LOCK_R	GPIO Header File.h	5;"	d
+GPIO_PORTC_PCTL_R	GPIO Header File.h	8;"	d
+GPIO_PORTF_DATA_R	GPIO Header File.h	18;"	d
+GPIO_PORTF_DEN_R	GPIO Header File.h	20;"	d
+GPIO_PORTF_DIR_R	GPIO Header File.h	19;"	d
+GPTM_CONFIG_R	PWM 1 Header File.h	11;"	d
+GPTM_CONFIG_R0	PWM Header File.h	9;"	d
+GPTM_CONFIG_R2	PWM 2 Header File.h	10;"	d
+GPTM_CONFIG_R3	PWM 3 Header File.h	10;"	d
+GPTM_CONTROL_R	PWM 1 Header File.h	13;"	d
+GPTM_CONTROL_R0	PWM Header File.h	11;"	d
+GPTM_CONTROL_R2	PWM 2 Header File.h	12;"	d
+GPTM_CONTROL_R3	PWM 3 Header File.h	12;"	d
+GPTM_INT_CLEAR_R	PWM 1 Header File.h	15;"	d
+GPTM_INT_CLEAR_R0	PWM Header File.h	13;"	d
+GPTM_INT_CLEAR_R2	PWM 2 Header File.h	14;"	d
+GPTM_INT_CLEAR_R3	PWM 3 Header File.h	14;"	d
+GPTM_INT_MASK_R	PWM 1 Header File.h	14;"	d
+GPTM_INT_MASK_R0	PWM Header File.h	12;"	d
+GPTM_INT_MASK_R2	PWM 2 Header File.h	13;"	d
+GPTM_INT_MASK_R3	PWM 3 Header File.h	13;"	d
+GPTM_TA_IL_R	PWM 1 Header File.h	16;"	d
+GPTM_TA_IL_R0	PWM Header File.h	14;"	d
+GPTM_TA_IL_R2	PWM 2 Header File.h	15;"	d
+GPTM_TA_IL_R3	PWM 3 Header File.h	15;"	d
+GPTM_TA_MATCH_R	PWM 1 Header File.h	17;"	d
+GPTM_TA_MATCH_R0	PWM Header File.h	15;"	d
+GPTM_TA_MATCH_R2	PWM 2 Header File.h	16;"	d
+GPTM_TA_MATCH_R3	PWM 3 Header File.h	16;"	d
+GPTM_TA_MODE_R	PWM 1 Header File.h	12;"	d
+GPTM_TA_MODE_R0	PWM Header File.h	10;"	d
+GPTM_TA_MODE_R2	PWM 2 Header File.h	11;"	d
+GPTM_TA_MODE_R3	PWM 3 Header File.h	11;"	d
+GPTM_TA_PRESCALE_MATCH_R2	PWM 2 Header File.h	9;"	d
+GPTM_TA_PRESCALE_MATCH_R3	PWM 3 Header File.h	9;"	d
+GPTM_TA_PRESCALE_R2	PWM 2 Header File.h	8;"	d
+GPTM_TA_PRESCALE_R3	PWM 3 Header File.h	8;"	d
+GREEN_RED	Timer Header File.h	26;"	d
+LED_RED	Timer Header File.h	22;"	d
+Left	Main.c	/^void Left  (int duty){$/;"	f
+MAX_TIME	Main.c	8;"	d	file:
+NIVC_EN1_INT33	Uart Header File.h	19;"	d
+NVIC_EN1_R	Uart Header File.h	18;"	d
+PORTS_CLK_EN	Timer Header File.h	21;"	d
+RCGC_GPIO_R	PWM 1 Header File.h	4;"	d
+RCGC_GPIO_R0	PWM Header File.h	4;"	d
+RCGC_GPIO_R2	PWM 2 Header File.h	4;"	d
+RCGC_GPIO_R3	PWM 3 Header File.h	4;"	d
+RCGC_TIMER_R	PWM 1 Header File.h	3;"	d
+RCGC_TIMER_R0	PWM Header File.h	3;"	d
+RCGC_TIMER_R2	PWM 2 Header File.h	3;"	d
+RCGC_TIMER_R3	PWM 3 Header File.h	3;"	d
+RED	GPIO Header File.h	22;"	d
+Right	Main.c	/^void Right(int duty){$/;"	f
+Right_Distance	Main.c	/^float Right_Distance(void) \/\/ Port A$/;"	f
+SYSCTL_RCGCTIMER_R	Timer Header File.h	1;"	d
+SYSCTL_RCGCUART_R	Uart Header File.h	1;"	d
+SYSCTL_RCGC_GPIO_R	Main.c	10;"	d	file:
+SYS_CLOCK_FREQUENCY	PWM 1 Header File.h	6;"	d
+SYS_CLOCK_FREQUENCY0	PWM Header File.h	6;"	d
+SYS_CLOCK_FREQUENCY2	PWM 2 Header File.h	6;"	d
+Stop	Main.c	/^void Stop(void){$/;"	f
+TIM0A_INT_CLR	Timer Header File.h	20;"	d
+TIM0B_INT_CLR	Timer Header File.h	23;"	d
+TIM0_CLK_EN	Timer Header File.h	15;"	d
+TIM0_EN	Timer Header File.h	16;"	d
+TIMER0_CFG_R	Timer Header File.h	3;"	d
+TIMER0_CTL_R	Timer Header File.h	2;"	d
+TIMER0_ICR_R	Timer Header File.h	10;"	d
+TIMER0_IMR_R	Timer Header File.h	11;"	d
+TIMER0_RIS_R	Timer Header File.h	12;"	d
+TIMER0_TAILR_R	Timer Header File.h	5;"	d
+TIMER0_TAMR_R	Timer Header File.h	4;"	d
+TIMER0_TAPR_R	Timer Header File.h	6;"	d
+TIMER0_TBILR_R	Timer Header File.h	8;"	d
+TIMER0_TBMR_R	Timer Header File.h	7;"	d
+TIMER0_TBPR_R	Timer Header File.h	9;"	d
+TIM_16_BIT_CONFIG	PWM 1 Header File.h	23;"	d
+TIM_16_BIT_CONFIG0	PWM Header File.h	23;"	d
+TIM_16_BIT_CONFIG2	PWM 2 Header File.h	22;"	d
+TIM_16_BIT_CONFIG3	PWM 3 Header File.h	24;"	d
+TIM_16_BIT_EN	Timer Header File.h	17;"	d
+TIM_A_ENABLE	PWM 1 Header File.h	25;"	d
+TIM_A_ENABLE0	PWM Header File.h	25;"	d
+TIM_A_ENABLE2	PWM 2 Header File.h	24;"	d
+TIM_A_ENABLE3	PWM 3 Header File.h	26;"	d
+TIM_A_INTERVAL	PWM 1 Header File.h	31;"	d
+TIM_A_INTERVAL0	PWM Header File.h	31;"	d
+TIM_A_INTERVAL2	PWM 2 Header File.h	30;"	d
+TIM_A_INTERVAL3	PWM 3 Header File.h	32;"	d
+TIM_A_MATCH	PWM 1 Header File.h	32;"	d
+TIM_A_MATCH0	PWM Header File.h	32;"	d
+TIM_A_MATCH2	PWM 2 Header File.h	31;"	d
+TIM_A_MATCH3	PWM 3 Header File.h	33;"	d
+TIM_CAPTURE_MODE	PWM 1 Header File.h	29;"	d
+TIM_CAPTURE_MODE0	PWM Header File.h	29;"	d
+TIM_CAPTURE_MODE2	PWM 2 Header File.h	28;"	d
+TIM_CAPTURE_MODE3	PWM 3 Header File.h	30;"	d
+TIM_FREQ_10usec	Timer Header File.h	19;"	d
+TIM_PERIODIC_MODE	PWM 1 Header File.h	24;"	d
+TIM_PERIODIC_MODE0	PWM Header File.h	24;"	d
+TIM_PERIODIC_MODE2	PWM 2 Header File.h	23;"	d
+TIM_PERIODIC_MODE3	PWM 3 Header File.h	25;"	d
+TIM_PWM_MODE	PWM 1 Header File.h	28;"	d
+TIM_PWM_MODE0	PWM Header File.h	28;"	d
+TIM_PWM_MODE2	PWM 2 Header File.h	27;"	d
+TIM_PWM_MODE3	PWM 3 Header File.h	29;"	d
+TIM_TAMR_PERIODIC_EN	Timer Header File.h	18;"	d
+TM_BASE	PWM 1 Header File.h	1;"	d
+TM_BASE0	PWM Header File.h	1;"	d
+TM_BASE2	PWM 2 Header File.h	1;"	d
+TM_BASE3	PWM 3 Header File.h	1;"	d
+TOGGLE_PF3	Timer Header File.h	25;"	d
+TRIGGER1	GPIO Header File.h	25;"	d
+Timer0A_Init	Main.c	/^void Timer0A_Init(void)$/;"	f
+Timer1A_Init	Main.c	/^void Timer1A_Init(void)$/;"	f
+Timer2A_Init	Main.c	/^void Timer2A_Init(void)$/;"	f
+Timer3A_Init	Main.c	/^void Timer3A_Init(void)$/;"	f
+UART3_CC_R	Uart Header File.h	8;"	d
+UART3_CTL_R	Uart Header File.h	4;"	d
+UART3_DR_R	Uart Header File.h	10;"	d
+UART3_FBRD_R	Uart Header File.h	6;"	d
+UART3_FIFO_LS_R	Uart Header File.h	16;"	d
+UART3_FR_R	Uart Header File.h	9;"	d
+UART3_Handler	Main.c	/^void UART3_Handler(void) {$/;"	f
+UART3_IBRD_R	Uart Header File.h	5;"	d
+UART3_INT_CLEAR_R	Uart Header File.h	15;"	d
+UART3_INT_MASK_R	Uart Header File.h	12;"	d
+UART3_LCRH_R	Uart Header File.h	7;"	d
+UART3_MIS_R	Uart Header File.h	14;"	d
+UART3_RIS_R	Uart Header File.h	13;"	d
+UART_FR_RXFE	Uart Header File.h	21;"	d
+UART_FR_TXFF	Uart Header File.h	22;"	d
+UART_INIT	Main.c	/^void UART_INIT (void)$/;"	f
+UART_Tx	Main.c	/^ void UART_Tx(unsigned char data) $/;"	f
+UART_Tx_String	Main.c	/^void UART_Tx_String (char *pt )$/;"	f
+car_init	Main.c	/^void car_init(void){$/;"	f
+delay	Main.c	/^void delay(unsigned long count)$/;"	f
+delay_debounce	GPIO Header File.h	35;"	d
+delay_microsecond	Main.c	/^void delay_microsecond(unsigned int time) \/\/ For Trigger$/;"	f
+main	Main.c	/^int main(void)$/;"	f
